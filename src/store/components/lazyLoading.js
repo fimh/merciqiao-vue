@@ -27,7 +27,7 @@ const dynamicRouter = [
     path: '/index',
     component: resolve => require(['@/components/index.vue'], resolve),
     meta: {
-      title: '系统首页'
+      title: '系统首页-2'
     }
   },
   {

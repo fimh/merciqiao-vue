@@ -63,10 +63,10 @@
                         index: '3',
                         title: '系统管理',
                         subs: [
-                            {
-                                index: 'organizationTree',
-                                title: '机构管理'
-                            }, 
+                            // {
+                            //     index: 'organizationTree',
+                            //     title: '机构管理'
+                            // }, 
                             {
                                 index: 'sysUser',
                                 title: '用户管理'
@@ -75,10 +75,10 @@
                                 index: 'sysRole',
                                 title: '角色管理'
                             }, 
-                            {
-                                index: 'sysAcl',
-                                title: '角色资源授权'
-                            }, 
+                            // {
+                            //     index: 'sysAcl',
+                            //     title: '角色资源授权'
+                            // }, 
                             {
                                 index: 'sysResource',
                                 title: '资源管理'

@@ -12,7 +12,6 @@ var mockObj={
             "status":"SUCCESS",
             "message":"登陆成功",
             "dataList":[
-        
             ],
             "data":{
                 "userInfo":{
@@ -33,7 +32,7 @@ var mockObj={
                 },
                 "sysRoleVoList":[
                     {
-                        "roleName":"黄金岗"
+                        "roleName":"管理员"
                     }
                 ],
                 "rolePermissionVoList":[
@@ -76,22 +75,22 @@ var mockObj={
         
                                 ]
                             },
-                            {
-                                "id":26,
-                                "menuCode":null,
-                                "menuName":"建议留言",
-                                "menuIcon":"",
-                                "menuUrl":null,
-                                "parentId":"1",
-                                "orderBy":"2",
-                                "isShow":1,
-                                "resoure_url":"",
-                                "resoure_type":"url",
-                                "permission":"msg",
-                                "sysMenuVoChild":[
+                            // {
+                            //     "id":26,
+                            //     "menuCode":null,
+                            //     "menuName":"建议留言",
+                            //     "menuIcon":"",
+                            //     "menuUrl":null,
+                            //     "parentId":"1",
+                            //     "orderBy":"2",
+                            //     "isShow":1,
+                            //     "resoure_url":"",
+                            //     "resoure_type":"url",
+                            //     "permission":"msg",
+                            //     "sysMenuVoChild":[
         
-                                ]
-                            }
+                            //     ]
+                            // }
                         ]
                     },
                     {
@@ -107,22 +106,22 @@ var mockObj={
                         "resoure_type":"module",
                         "permission":"2",
                         "sysMenuVoChild":[
-                            {
-                                "id":6,
-                                "menuCode":null,
-                                "menuName":"查询输入页",
-                                "menuIcon":"0",
-                                "menuUrl":null,
-                                "parentId":"2",
-                                "orderBy":"1",
-                                "isShow":1,
-                                "resoure_url":"WorkPiece/index",
-                                "resoure_type":"url",
-                                "permission":"searchinput",
-                                "sysMenuVoChild":[
+                            // {
+                            //     "id":6,
+                            //     "menuCode":null,
+                            //     "menuName":"查询输入页",
+                            //     "menuIcon":"0",
+                            //     "menuUrl":null,
+                            //     "parentId":"2",
+                            //     "orderBy":"1",
+                            //     "isShow":1,
+                            //     "resoure_url":"WorkPiece/index",
+                            //     "resoure_type":"url",
+                            //     "permission":"searchinput",
+                            //     "sysMenuVoChild":[
         
-                                ]
-                            },
+                            //     ]
+                            // },
                             {
                                 "id":7,
                                 "menuCode":null,
@@ -155,22 +154,22 @@ var mockObj={
         
                                 ]
                             },
-                            {
-                                "id":23,
-                                "menuCode":null,
-                                "menuName":"树组件页",
-                                "menuIcon":"",
-                                "menuUrl":null,
-                                "parentId":"2",
-                                "orderBy":"5",
-                                "isShow":1,
-                                "resoure_url":"",
-                                "resoure_type":"url",
-                                "permission":"treepage",
-                                "sysMenuVoChild":[
+                            // {
+                            //     "id":23,
+                            //     "menuCode":null,
+                            //     "menuName":"树组件页",
+                            //     "menuIcon":"",
+                            //     "menuUrl":null,
+                            //     "parentId":"2",
+                            //     "orderBy":"5",
+                            //     "isShow":1,
+                            //     "resoure_url":"",
+                            //     "resoure_type":"url",
+                            //     "permission":"treepage",
+                            //     "sysMenuVoChild":[
         
-                                ]
-                            },
+                            //     ]
+                            // },
                             {
                                 "id":27,
                                 "menuCode":null,
@@ -202,22 +201,22 @@ var mockObj={
                                     }
                                 ]
                             },
-                            {
-                                "id":30,
-                                "menuCode":null,
-                                "menuName":"富文本编辑器",
-                                "menuIcon":"",
-                                "menuUrl":null,
-                                "parentId":"2",
-                                "orderBy":"",
-                                "isShow":1,
-                                "resoure_url":"",
-                                "resoure_type":"url",
-                                "permission":"ckeditor",
-                                "sysMenuVoChild":[
+                            // {
+                            //     "id":30,
+                            //     "menuCode":null,
+                            //     "menuName":"富文本编辑器",
+                            //     "menuIcon":"",
+                            //     "menuUrl":null,
+                            //     "parentId":"2",
+                            //     "orderBy":"",
+                            //     "isShow":1,
+                            //     "resoure_url":"",
+                            //     "resoure_type":"url",
+                            //     "permission":"ckeditor",
+                            //     "sysMenuVoChild":[
         
-                                ]
-                            },
+                            //     ]
+                            // },
                             {
                                 "id":34,
                                 "menuCode":null,
@@ -234,135 +233,134 @@ var mockObj={
         
                                 ]
                             },
-                            {
-                                "id":35,
-                                "menuCode":null,
-                                "menuName":"左导航切换效果",
-                                "menuIcon":"",
-                                "menuUrl":null,
-                                "parentId":"2",
-                                "orderBy":"",
-                                "isShow":1,
-                                "resoure_url":"",
-                                "resoure_type":"url",
-                                "permission":"transition",
-                                "sysMenuVoChild":[
+                            // {
+                            //     "id":35,
+                            //     "menuCode":null,
+                            //     "menuName":"左导航切换效果",
+                            //     "menuIcon":"",
+                            //     "menuUrl":null,
+                            //     "parentId":"2",
+                            //     "orderBy":"",
+                            //     "isShow":1,
+                            //     "resoure_url":"",
+                            //     "resoure_type":"url",
+                            //     "permission":"transition",
+                            //     "sysMenuVoChild":[
         
-                                ]
-                            }
+                            //     ]
+                            // }
                         ]
                     },
-                    {
-                        "id":3,
-                        "menuCode":null,
-                        "menuName":"系统管理",
-                        "menuIcon":"el-icon-setting",
-                        "menuUrl":null,
-                        "parentId":"0",
-                        "orderBy":"3",
-                        "isShow":1,
-                        "resoure_url":null,
-                        "resoure_type":"module",
-                        "permission":"3",
-                        "sysMenuVoChild":[
-                            {
-                                "id":8,
-                                "menuCode":null,
-                                "menuName":"机构管理",
-                                "menuIcon":"0",
-                                "menuUrl":null,
-                                "parentId":"3",
-                                "orderBy":"1",
-                                "isShow":1,
-                                "resoure_url":"Admin/OrganizationTree",
-                                "resoure_type":"url",
-                                "permission":"organizationTree",
-                                "sysMenuVoChild":[
+                    // {
+                    //     "id":3,
+                    //     "menuCode":null,
+                    //     "menuName":"系统管理",
+                    //     "menuIcon":"el-icon-setting",
+                    //     "menuUrl":null,
+                    //     "parentId":"0",
+                    //     "orderBy":"3",
+                    //     "isShow":1,
+                    //     "resoure_url":null,
+                    //     "resoure_type":"module",
+                    //     "permission":"3",
+                    //     "sysMenuVoChild":[
+                    //         {
+                    //             "id":8,
+                    //             "menuCode":null,
+                    //             "menuName":"机构管理",
+                    //             "menuIcon":"0",
+                    //             "menuUrl":null,
+                    //             "parentId":"3",
+                    //             "orderBy":"1",
+                    //             "isShow":0,
+                    //             "resoure_url":"Admin/OrganizationTree",
+                    //             "resoure_type":"url",
+                    //             "permission":"organizationTree",
+                    //             "sysMenuVoChild":[
         
-                                ]
-                            },
-                            {
-                                "id":9,
-                                "menuCode":null,
-                                "menuName":"用户管理",
-                                "menuIcon":"0",
-                                "menuUrl":null,
-                                "parentId":"3",
-                                "orderBy":"2",
-                                "isShow":1,
-                                "resoure_url":"Admin/SysUser",
-                                "resoure_type":"url",
-                                "permission":"sysUser",
-                                "sysMenuVoChild":[
+                    //             ]
+                    //         },
+                    //         {
+                    //             "id":9,
+                    //             "menuCode":null,
+                    //             "menuName":"用户管理",
+                    //             "menuIcon":"0",
+                    //             "menuUrl":null,
+                    //             "parentId":"3",
+                    //             "orderBy":"2",
+                    //             "isShow":1,
+                    //             "resoure_url":"Admin/SysUser",
+                    //             "resoure_type":"url",
+                    //             "permission":"sysUser",
+                    //             "sysMenuVoChild":[
         
-                                ]
-                            },
-                            {
-                                "id":11,
-                                "menuCode":null,
-                                "menuName":"角色管理",
-                                "menuIcon":"0",
-                                "menuUrl":null,
-                                "parentId":"3",
-                                "orderBy":"4",
-                                "isShow":1,
-                                "resoure_url":"Admin/SysRole",
-                                "resoure_type":"url",
-                                "permission":"sysRole",
-                                "sysMenuVoChild":[
+                    //             ]
+                    //         },
+                    //         {
+                    //             "id":11,
+                    //             "menuCode":null,
+                    //             "menuName":"角色管理",
+                    //             "menuIcon":"0",
+                    //             "menuUrl":null,
+                    //             "parentId":"3",
+                    //             "orderBy":"4",
+                    //             "isShow":1,
+                    //             "resoure_url":"Admin/SysRole",
+                    //             "resoure_type":"url",
+                    //             "permission":"sysRole",
+                    //             "sysMenuVoChild":[
         
-                                ]
-                            },
-                            {
-                                "id":12,
-                                "menuCode":null,
-                                "menuName":"资源管理",
-                                "menuIcon":"0",
-                                "menuUrl":null,
-                                "parentId":"3",
-                                "orderBy":"5",
-                                "isShow":1,
-                                "resoure_url":"Admin/SysResource",
-                                "resoure_type":"url",
-                                "permission":"sysResource",
-                                "sysMenuVoChild":[
+                    //             ]
+                    //         },
+                    //         // {
+                    //         //     "id":12,
+                    //         //     "menuCode":null,
+                    //         //     "menuName":"资源管理",
+                    //         //     "menuIcon":"0",
+                    //         //     "menuUrl":null,
+                    //         //     "parentId":"3",
+                    //         //     "orderBy":"5",
+                    //         //     "isShow":1,
+                    //         //     "resoure_url":"Admin/SysResource",
+                    //         //     "resoure_type":"url",
+                    //         //     "permission":"sysResource",
+                    //         //     "sysMenuVoChild":[
         
-                                ]
-                            },
-                            {
-                                "id":14,
-                                "menuCode":null,
-                                "menuName":"菜单管理",
-                                "menuIcon":"0",
-                                "menuUrl":null,
-                                "parentId":"3",
-                                "orderBy":"7",
-                                "isShow":1,
-                                "resoure_url":"Admin/SysMenu",
-                                "resoure_type":"url",
-                                "permission":"sysMenu",
-                                "sysMenuVoChild":[
+                    //         //     ]
+                    //         // },
+                    //         // {
+                    //         //     "id":14,
+                    //         //     "menuCode":null,
+                    //         //     "menuName":"菜单管理",
+                    //         //     "menuIcon":"0",
+                    //         //     "menuUrl":null,
+                    //         //     "parentId":"3",
+                    //         //     "orderBy":"7",
+                    //         //     "isShow":1,
+                    //         //     "resoure_url":"Admin/SysMenu",
+                    //         //     "resoure_type":"url",
+                    //         //     "permission":"sysMenu",
+                    //         //     "sysMenuVoChild":[
         
-                                ]
-                            },
-                            {
-                                "id":15,
-                                "menuCode":null,
-                                "menuName":"角色资源授权",
-                                "menuIcon":"0",
-                                "menuUrl":null,
-                                "parentId":"3",
-                                "orderBy":"8",
-                                "isShow":1,
-                                "resoure_url":"Admin/SysAcl",
-                                "resoure_type":"url",
-                                "permission":"sysAcl",
-                                "sysMenuVoChild":[
-        
-                                ]
-                            }
-                        ]
-                    }
+                    //         //     ]
+                    //         // },
+                    //         // {
+                    //         //     "id":15,
+                    //         //     "menuCode":null,
+                    //         //     "menuName":"角色资源授权",
+                    //         //     "menuIcon":"0",
+                    //         //     "menuUrl":null,
+                    //         //     "parentId":"3",
+                    //         //     "orderBy":"8",
+                    //         //     "isShow":1,
+                    //         //     "resoure_url":"Admin/SysAcl",
+                    //         //     "resoure_type":"url",
+                    //         //     "permission":"sysAcl",
+                    //         //     "sysMenuVoChild":[
+                    //         //     ]
+                    //         // }
+                    //     ]
+                    // }
                 ]
             },
             "count":null,

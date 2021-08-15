@@ -26,14 +26,14 @@
       </el-table-column>
       <el-table-column prop="updatetime" label="时间" :formatter="this.$common.timestampToTime" min-width="25">
       </el-table-column>
-      <!-- <el-table-column label="操作" fixed="right" min-width="28">
+      <el-table-column label="操作" fixed="right" min-width="28">
         <template slot-scope="scope">
            <div v-show="enable(scope)">
             <el-button id='copy_btn' data-clipboard-action="copy" :data-clipboard-target="'#code_'+scope.$index" size="mini" @click="copy(scope.$index, scope.row)">复制</el-button>
           </div>
           <div style="text-align:center;" v-show="!enable(scope)">自己</div>
         </template>
-      </el-table-column> -->
+      </el-table-column>
     </el-table>
   </div>
 </template>
