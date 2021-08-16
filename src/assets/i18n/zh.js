@@ -5,9 +5,9 @@
 
 module.exports = {
     home:{
-        'title' : '后台管理系统',
+        'title' : 'Travel Info System',
     },
     footer:{
-        'title':'京ICP备18050367号-1 qq群:73110051(无广告)',
+        'title':'Travel Info System',
     }
 }

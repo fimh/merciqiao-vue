@@ -145,6 +145,14 @@ const dynamicRouter = [
     }
   },
   {
+    name: 'travelinfoboard',
+    path: '/travelinfoboard',
+    component: resolve => require(['@/components/tablepage/travelinfoboard.vue'], resolve),
+    meta: {
+      title: '增删改查二'
+    }
+  },
+  {
     name: 'transition',
     path: '/transition',
     component: resolve => require(['@/components/flex/transition.vue'], resolve),

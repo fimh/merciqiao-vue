@@ -2,7 +2,7 @@ const Mock = require("mockjs")
 /** mockjs start */
 var mockObj={
     dataList:[],
-    count:60,
+    count:50,
     //初始化
     init(){
         for (let i = 0; i < this.count; i++) {

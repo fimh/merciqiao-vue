@@ -138,22 +138,22 @@ var mockObj={
         
                                 ]
                             },
-                            {
-                                "id":22,
-                                "menuCode":null,
-                                "menuName":"表单页",
-                                "menuIcon":"",
-                                "menuUrl":null,
-                                "parentId":"2",
-                                "orderBy":"4",
-                                "isShow":1,
-                                "resoure_url":"",
-                                "resoure_type":"url",
-                                "permission":"formpage",
-                                "sysMenuVoChild":[
+                            // {
+                            //     "id":22,
+                            //     "menuCode":null,
+                            //     "menuName":"表单页",
+                            //     "menuIcon":"",
+                            //     "menuUrl":null,
+                            //     "parentId":"2",
+                            //     "orderBy":"4",
+                            //     "isShow":1,
+                            //     "resoure_url":"",
+                            //     "resoure_type":"url",
+                            //     "permission":"formpage",
+                            //     "sysMenuVoChild":[
         
-                                ]
-                            },
+                            //     ]
+                            // },
                             // {
                             //     "id":23,
                             //     "menuCode":null,
@@ -170,37 +170,37 @@ var mockObj={
         
                             //     ]
                             // },
-                            {
-                                "id":27,
-                                "menuCode":null,
-                                "menuName":"综合表单页",
-                                "menuIcon":"",
-                                "menuUrl":null,
-                                "parentId":"2",
-                                "orderBy":"1",
-                                "isShow":1,
-                                "resoure_url":"",
-                                "resoure_type":"url",
-                                "permission":"messageboard",
-                                "sysMenuVoChild":[
-                                    {
-                                        "id":29,
-                                        "menuCode":null,
-                                        "menuName":"详情页",
-                                        "menuIcon":"",
-                                        "menuUrl":null,
-                                        "parentId":"27",
-                                        "orderBy":"",
-                                        "isShow":0,
-                                        "resoure_url":"",
-                                        "resoure_type":"url",
-                                        "permission":"detail",
-                                        "sysMenuVoChild":[
+                            // {
+                            //     "id":27,
+                            //     "menuCode":null,
+                            //     "menuName":"综合表单页",
+                            //     "menuIcon":"",
+                            //     "menuUrl":null,
+                            //     "parentId":"2",
+                            //     "orderBy":"1",
+                            //     "isShow":1,
+                            //     "resoure_url":"",
+                            //     "resoure_type":"url",
+                            //     "permission":"messageboard",
+                            //     "sysMenuVoChild":[
+                            //         {
+                            //             "id":29,
+                            //             "menuCode":null,
+                            //             "menuName":"详情页",
+                            //             "menuIcon":"",
+                            //             "menuUrl":null,
+                            //             "parentId":"27",
+                            //             "orderBy":"",
+                            //             "isShow":0,
+                            //             "resoure_url":"",
+                            //             "resoure_type":"url",
+                            //             "permission":"detail",
+                            //             "sysMenuVoChild":[
         
-                                        ]
-                                    }
-                                ]
-                            },
+                            //             ]
+                            //         }
+                            //     ]
+                            // },
                             // {
                             //     "id":30,
                             //     "menuCode":null,
@@ -218,7 +218,7 @@ var mockObj={
                             //     ]
                             // },
                             {
-                                "id":34,
+                                "id":33,
                                 "menuCode":null,
                                 "menuName":"综合表单页2",
                                 "menuIcon":"",
@@ -229,6 +229,22 @@ var mockObj={
                                 "resoure_url":"",
                                 "resoure_type":"url",
                                 "permission":"messageboard2",
+                                "sysMenuVoChild":[
+        
+                                ]
+                            },
+                            {
+                                "id":34,
+                                "menuCode":null,
+                                "menuName":"Travel Info Board",
+                                "menuIcon":"",
+                                "menuUrl":null,
+                                "parentId":"2",
+                                "orderBy":"",
+                                "isShow":1,
+                                "resoure_url":"",
+                                "resoure_type":"url",
+                                "permission":"travelinfoboard",
                                 "sysMenuVoChild":[
         
                                 ]
