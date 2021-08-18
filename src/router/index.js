@@ -17,23 +17,8 @@ const router = new VueRouter({
       }
     },
     {
-      path: '/tree',
-      component: resolve => require(['@/components/mayi/tree.vue'], resolve),
-      meta: {
-        title: '蚂蚁种树'
-      }
-    },
-    {
-      path: '/zanzhu',
-      component: resolve => require(['../components/zanzhu.vue'], resolve)
-    },
-    {
       path: '/bottom',
       component: resolve => require(['../components/flex/bottom.vue'], resolve)
-    },
-    {
-      path: '/bangka',
-      component: resolve => require(['../components/test/bangka.vue'], resolve)
     },
     {
       path: '/404',
@@ -87,7 +72,8 @@ axios.interceptors.response.use(function (response) {
 router.beforeEach((to, from, next) => {
   //debugger
   console.log('跳转到:', to.fullPath);
-  if (to.path == '/tree'||to.path=='/bangka') {
+  // next();
+  if (to.path == '/tree' || to.path == '/bangka') {
     next();
   }
   else {

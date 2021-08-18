@@ -12,21 +12,13 @@ var routeDevList = [
             title: '静态菜单路由'
         }
     },
-    // {
-    //     path: '/toimg',
-    //     component: resolve => require(['../components/topdf/topdf.vue'], resolve),
-    //     meta:{
-    //         title:'生成图片页'
-    //     }
-    // },
     {
         path: '/test',
         component: resolve => require(['../components/topdf/test.vue'], resolve),
-        meta:{
-            title:'测试flex'
+        meta: {
+            title: '测试flex'
         }
     },
-
 ];
 //静态菜单
 var menuDevList = [
@@ -41,17 +33,6 @@ var menuDevList = [
             },
         ]
     },
-    // {
-    //     icon: 'el-icon-date',
-    //     index: Math.random() + '',
-    //     title: '生成图片页',
-    //     subs: [
-    //         {
-    //             index: 'toimg2',
-    //             title: '生成图片页222'
-    //         },
-    //     ]
-    // }
 ]
 
 

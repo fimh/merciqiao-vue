@@ -25,8 +25,5 @@ export default {
             pageSize:pageSize
         };
         return Axios.post('/api/mayi-api/queryList', param);
-    },
-    getZanZhu(){
-        return Axios.post('/api/mayi-api/queryZanZhu');
     }
 }

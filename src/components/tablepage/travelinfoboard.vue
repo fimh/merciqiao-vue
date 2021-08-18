@@ -126,7 +126,6 @@
         width: 220px;
     }
 }
-
 </style>
 
 <script>
@@ -165,8 +164,6 @@ export default {
                     { required: true, message: "请输入姓名", trigger: "blur" },
                     { min: 2, max: 4, message: "长度在 2 到 4 个字符", trigger: "blur" }
                 ],
-                city:[{ required: true, message: "请输入城市", trigger: "blur" }]
-                ,
                 type: [{ required: true, message: "请选择类别", trigger: "change" }],
                 gender: [{ required: false, message: "请选择性别", trigger: "change" }]
             },
@@ -224,12 +221,6 @@ export default {
     },
     mounted(){
         this.onSearch();
-        var loginLog = {
-            ip: returnCitySN["cip"],
-            city: returnCitySN["cname"] + "-增删改查页"
-        };
-
-        apis.shiroApi.loginLog(loginLog);
     },
     methods: {
         /**
@@ -247,7 +238,6 @@ export default {
             .then((data)=>{
                 this.listLoading=false;
                 if (data && data.data) {
-                    
                         var json = data.data;
                         if (json.status == 'SUCCESS') {
                             this.pageInfo.pageTotal=json.count;
