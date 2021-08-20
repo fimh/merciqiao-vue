@@ -1,4 +1,3 @@
-import routeDev from '../../router/routeDev'
 /**
  * 动态添加菜单
  * author:qlx
@@ -9,13 +8,7 @@ const addMenus = {
   },
   getters:{
     getMenuList:state=>{
-      if(routeDev.MENU_DEV==true){
-        return state.menuList.concat(routeDev.menuDevList);
-      }
-      else{
-        return state.menuList;
-      }
-      
+      return state.menuList;
   }
   },
   mutations: {

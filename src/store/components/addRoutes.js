@@ -1,6 +1,5 @@
 import ConvertRoutes from './convertRoutes'
 import router from '../../router'
-import routeDev from '../../router/routeDev'
 
 /**
  * 动态添加路由
@@ -25,9 +24,9 @@ const addRoutes = {
       });
       //写入开发模式下静态路由
 
-      if(routeDev.ROUTE_DEV==true){
-        routeList.push(...routeDev.routeDevList);//...是es6中的 ‘点语法’ 扩展运算符
-      }
+      // if(routeDev.ROUTE_DEV==true){
+      //   routeList.push(...routeDev.routeDevList);//...是es6中的 ‘点语法’ 扩展运算符
+      // }
 
       let routeHideList=[];
       ConvertRoutes(routeList, routeHideList,routeParam); // 将后台的路由数据components转化成组件
