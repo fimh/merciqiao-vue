@@ -4,56 +4,45 @@ import Axios from "axios";
  * 提供msg相关接口
  */
 export default {
-    add:function({name,city,type,age,gender,qq,text}){
-         var param={
-            name:name,
-            city:city,
-            type:type,
-            age:age,
-            gender:gender,
-            text:text,
-            qq:qq
+    add: function ({ id, gender, birthYear, totalMile, totalTime}) {
+        var param = {
+            id: id,
+            gender: gender,
+            birthYear: birthYear,
+            totalMile: totalMile,
+            totalTime: totalTime
         };
-        return Axios.post('/api/msg-api/add', param);
+        return Axios.post('/travel-api/travels', param);
     },
-    update:function({id,name,city,type,age,gender,qq,text}){
-        var param={
-            id:id,
-           name:name,
-           city:city,
-           type:type,
-           age:age,
-           gender:gender,
-           text:text,
-           qq:qq
-       };
-       return Axios.post('/api/msg-api/update', param);
-   },
-   delete:function({id}){
-        var param={
-            id:id
+    update: function ({ id, gender, birthYear, totalMile, totalTime }) {
+        var param = {
+            gender: gender,
+            birthYear: birthYear,
+            totalMile: totalMile,
+            totalTime: totalTime
         };
-        return Axios.post('/api/msg-api/delete', param);
+        return Axios.put('/travel-api/travels/'+id, param);
     },
-    deleteBatch:function({ids}){
-        var param={
-            ids:ids
+    delete: function ({ id }) {
+        return Axios.delete('/travel-api/travels/'+id);
+    },
+    deleteBatch: function ({ ids }) {
+        var param = {
+            ids: ids
         };
         return Axios.post('/api/msg-api/deleteBatch', param);
     },
-    getList({name,city,type,age,gender,qq,startdate,enddate,currentPage,pageSize}){
-        var param={
-            name:name,
-            city:city,
-            type:type,
-            age:age,
-            gender:gender,
-            qq:qq,
-            startdate:startdate,
-            enddate:enddate,
-            currentPage:currentPage,
-            pageSize:pageSize
+    getList({ startBirthYear, endBirthYear, startMile, endMile, startTime, endTime, currentPage, pageSize }) {
+        var param = {
+            pageSize: pageSize,
+            pageNum: currentPage - 1,
+            startBirthYear: startBirthYear,
+            endBirthYear: endBirthYear,
+            startMile: startMile,
+            endMile: endMile,
+            startTime: startTime,
+            endTime: endTime
         };
-        return Axios.post('/api/msg-api/queryList', param);
+        return Axios.get('/travel-api/travels', { params: param });
     }
 }

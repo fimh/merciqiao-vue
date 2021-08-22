@@ -30,7 +30,7 @@ Vue.use(Vuex);
 // Vue.use(CKEditor);
 
 // import permission from './directive' // simplify
-process.env.MOCK && require('@/apimock')
+// process.env.MOCK && require('@/apimock')
 
 /* eslint-disable no-new */
 new Vue({
