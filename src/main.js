@@ -22,6 +22,7 @@ window.moment = require('moment')
 import i18n from './common/i18n'
 
 Vue.prototype.$ajax = axios
+Vue.prototype.$EventBus = new Vue()
 Vue.config.productionTip = false
 
 // Vue.use(ElementUI);
@@ -60,7 +61,7 @@ let sysMenuVoList = [
       {
         id: 7,
         menuCode: null,
-        menuName: "标签选项卡",
+        menuName: "Travel Info",
         menuIcon: "0",
         menuUrl: null,
         parentId: "2",
@@ -68,27 +69,13 @@ let sysMenuVoList = [
         isShow: 1,
         resoure_url: "FlowMonitor/index",
         resoure_type: "url",
-        permission: "tabpage",
+        permission: "travelinfo",
         sysMenuVoChild: [],
-      },
-      {
-        id: 34,
-        menuCode: null,
-        menuName: "Travel Info Board",
-        menuIcon: "",
-        menuUrl: null,
-        parentId: "2",
-        orderBy: "",
-        isShow: 1,
-        resoure_url: "",
-        resoure_type: "url",
-        permission: "travelinfoboard",
-        sysMenuVoChild: [],
-      },
+      }
     ],
   },
 ]
 
 store.dispatch("add_Menus", sysMenuVoList);
 store.dispatch("add_Routes", sysMenuVoList);
-router.replace({ path: "/travelinfoboard" });
+router.replace({ path: "/travelinfo" });

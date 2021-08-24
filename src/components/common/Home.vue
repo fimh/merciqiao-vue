@@ -26,7 +26,6 @@
   flex-direction: column;
   height: 100%;
   .content_inner {
-    //    background: #fff;
     height: 100%;
   }
 }
@@ -48,7 +47,7 @@ export default {
   components: {
     vHead,
     vSidebar,
-    vTags,
+    // vTags,
     vFooter,
   },
   created() {

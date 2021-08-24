@@ -2,6 +2,7 @@
   <div class="container messageboard">
     <!-- 查询区----start -->
     <el-form
+      v-show="queryObj == null"
       :label-position="labelPosition"
       :label-width="labelWidth"
       :inline="true"
@@ -72,7 +73,7 @@
 
     <!-- 查询区----end -->
     <!-- 操作区----start -->
-    <el-row class="mgb15">
+    <el-row class="mgb15" v-show="queryObj == null">
       <el-button size="small" round type="primary" @click="handleAdd"
         >新增</el-button
       >
@@ -91,7 +92,8 @@
       style="width: 100%"
       @selection-change="handleSelectionChange"
     >
-      <el-table-column type="selection" width="60"> </el-table-column>
+      <el-table-column type="selection" width="60" v-if="queryObj == null">
+      </el-table-column>
 
       <el-table-column
         prop="id"
@@ -133,7 +135,12 @@
       >
       </el-table-column>
 
-      <el-table-column label="操作" fixed="right" min-width="230">
+      <el-table-column
+        label="操作"
+        fixed="right"
+        min-width="230"
+        v-if="queryObj == null"
+      >
         <template slot-scope="scope">
           <el-button
             size="mini"
@@ -230,9 +237,11 @@
 </style>
 
 <script>
+import bus from "../common/bus";
 import apis from "../../apis/apis";
 export default {
   name: "messageboard",
+  props: ["queryObj"],
   data() {
     return {
       listLoading: false,
@@ -314,7 +323,11 @@ export default {
     },
   },
   mounted() {
-    this.onRefreshData();
+    if (this.queryObj == null) {
+      this.onRefreshData();
+    } else {
+      this.onQuery(this.queryObj);
+    }
   },
   methods: {
     /**
@@ -341,25 +354,57 @@ export default {
         });
     },
 
+    isNull(str) {
+      if (str == null) return true;
+      if (str == "") return true;
+      var regu = "^[ ]+$";
+      var re = new RegExp(regu);
+      return re.test(str);
+    },
+
     onSearch() {
       this.listLoading = true;
 
       let param = Object.assign({}, this.pageInfo);
 
       let searchType = this.formSearch.searchType.value;
+      param.searchType = searchType;
       if (searchType == "birthYear") {
         param.startBirthYear = this.formSearch.startBirthYear;
         param.endBirthYear = this.formSearch.endBirthYear;
+        if (
+          this.isNull(param.startBirthYear) ||
+          this.isNull(param.endBirthYear)
+        ) {
+          this.listLoading = false;
+          this.$message({ message: "请输入查询条件", type: "error" });
+          return;
+        }
       } else if (searchType == "totalTime") {
         param.startTime = this.formSearch.startTime;
         param.endTime = this.formSearch.endTime;
+        if (this.isNull(param.startTime) || this.isNull(param.endTime)) {
+          this.listLoading = false;
+          this.$message({ message: "请输入查询条件", type: "error" });
+          return;
+        }
       } else if (searchType == "totalMile") {
         param.startMile = this.formSearch.startMile;
         param.endMile = this.formSearch.endMile;
+        if (this.isNull(param.startMile) || this.isNull(param.endMile)) {
+          this.listLoading = false;
+          this.$message({ message: "请输入查询条件", type: "error" });
+          return;
+        }
       }
 
+      bus.$emit("new_search_request", param);
+      this.listLoading = false;
+    },
+
+    onQuery(queryObj) {
       apis.msgApi
-        .getList(param)
+        .getList(queryObj)
         .then((data) => {
           this.listLoading = false;
           console.info(data);

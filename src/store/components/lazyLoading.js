@@ -22,17 +22,17 @@ function getComponetByPath(path) {
  * path跟配置里的资源标示对应,同时跟url地址对应
  */
 const dynamicRouter = [
+  // {
+  //   name: 'index',
+  //   path: '/index',
+  //   component: resolve => require(['@/components/index.vue'], resolve),
+  //   meta: {
+  //     title: '系统首页-2'
+  //   }
+  // },
   {
-    name: 'index',
-    path: '/index',
-    component: resolve => require(['@/components/index.vue'], resolve),
-    meta: {
-      title: '系统首页-2'
-    }
-  },
-  {
-    name: 'tabpage',
-    path: '/tabpage',
+    name: 'travelinfo',
+    path: '/travelinfo',
     component: resolve => require(['@/components/tabpage/tabpage.vue'], resolve),
     meta: {
       title: '标签选项卡'

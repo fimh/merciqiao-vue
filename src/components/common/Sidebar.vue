@@ -38,64 +38,7 @@ export default {
   data() {
     return {
       collapse: false,
-      items: [
-        {
-          icon: "el-icon-setting",
-          index: "index",
-          title: "系统首页",
-        },
-        {
-          icon: "el-icon-tickets",
-          index: "table",
-          title: "基础模块",
-          subs: [
-            {
-              index: "searchinput",
-              title: "查询输入页",
-            },
-            {
-              index: "tabpage",
-              title: "标签选项卡",
-            },
-            {
-              index: "tablepage",
-              title: "综合表格页",
-            },
-            {
-              index: "formpage",
-              title: "表单页",
-            },
-            {
-              index: "treepage",
-              title: "树组件页",
-            },
-          ],
-        },
-        {
-          icon: "el-icon-setting",
-          index: "3",
-          title: "系统管理",
-          subs: [
-            {
-              index: "sysUser",
-              title: "用户管理",
-            },
-            {
-              index: "sysRole",
-              title: "角色管理",
-            },
-            {
-              index: "sysResource",
-              title: "资源管理",
-            },
-            {
-              index: "sysMenu",
-              title: "菜单管理",
-            },
-          ],
-        },
-
-      ],
+      items: [],
     };
   },
   computed: mapGetters({

@@ -1,10 +1,7 @@
 import Axios from "axios";
 
-/**
- * 提供msg相关接口
- */
 export default {
-    add: function ({ id, gender, birthYear, totalMile, totalTime}) {
+    add: function ({ id, gender, birthYear, totalMile, totalTime }) {
         var param = {
             id: id,
             gender: gender,
@@ -21,17 +18,17 @@ export default {
             totalMile: totalMile,
             totalTime: totalTime
         };
-        return Axios.put('/travel-api/travels/'+id, param);
+        return Axios.put('/travel-api/travels/' + id, param);
     },
     delete: function ({ id }) {
-        return Axios.delete('/travel-api/travels/'+id);
+        return Axios.delete('/travel-api/travels/' + id);
     },
-    deleteBatch: function ({ ids }) {
-        var param = {
-            ids: ids
-        };
-        return Axios.post('/api/msg-api/deleteBatch', param);
-    },
+    // deleteBatch: function ({ ids }) {
+    //     var param = {
+    //         ids: ids
+    //     };
+    //     return Axios.post('/api/msg-api/deleteBatch', param);
+    // },
     getList({ startBirthYear, endBirthYear, startMile, endMile, startTime, endTime, currentPage, pageSize }) {
         var param = {
             pageSize: pageSize,
