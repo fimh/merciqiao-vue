@@ -73,11 +73,11 @@
 
     <!-- 查询区----end -->
     <!-- 操作区----start -->
-    <el-row class="mgb15" v-show="queryObj == null">
+    <el-row class="mgb15" v-show="queryObj == null" style="margin-left: 100px">
       <el-button size="small" round type="primary" @click="handleAdd"
         >新增</el-button
       >
-      <el-button size="small" round type="danger" @click="deleteMany"
+      <el-button size="small" round type="danger" @click="deleteMany" v-show="false"
         >批量删除</el-button
       >
     </el-row>
@@ -92,7 +92,7 @@
       style="width: 100%"
       @selection-change="handleSelectionChange"
     >
-      <el-table-column type="selection" width="60" v-if="queryObj == null">
+      <el-table-column type="selection" width="60" v-if="false">
       </el-table-column>
 
       <el-table-column
@@ -361,6 +361,11 @@ export default {
       var re = new RegExp(regu);
       return re.test(str);
     },
+    isNumber(number) {
+      var numReg = /^[0-9]*$/;
+      var numRe = new RegExp(numReg);
+      return numRe.test(number);
+    },
 
     onSearch() {
       this.listLoading = true;
@@ -368,34 +373,44 @@ export default {
       let param = Object.assign({}, this.pageInfo);
 
       let searchType = this.formSearch.searchType.value;
+      var startCond, endCond;
       param.searchType = searchType;
       if (searchType == "birthYear") {
         param.startBirthYear = this.formSearch.startBirthYear;
         param.endBirthYear = this.formSearch.endBirthYear;
-        if (
-          this.isNull(param.startBirthYear) ||
-          this.isNull(param.endBirthYear)
-        ) {
-          this.listLoading = false;
-          this.$message({ message: "请输入查询条件", type: "error" });
-          return;
-        }
+
+        startCond = param.startBirthYear;
+        endCond = param.endBirthYear;
       } else if (searchType == "totalTime") {
         param.startTime = this.formSearch.startTime;
         param.endTime = this.formSearch.endTime;
-        if (this.isNull(param.startTime) || this.isNull(param.endTime)) {
-          this.listLoading = false;
-          this.$message({ message: "请输入查询条件", type: "error" });
-          return;
-        }
+
+        startCond = param.startTime;
+        endCond = param.endTime;
       } else if (searchType == "totalMile") {
         param.startMile = this.formSearch.startMile;
         param.endMile = this.formSearch.endMile;
-        if (this.isNull(param.startMile) || this.isNull(param.endMile)) {
-          this.listLoading = false;
-          this.$message({ message: "请输入查询条件", type: "error" });
-          return;
-        }
+
+        startCond = param.startMile;
+        endCond = param.endMile;
+      }
+
+      if (this.isNull(startCond) || this.isNull(endCond)) {
+        this.listLoading = false;
+        this.$message({ message: "请输入查询条件", type: "warning" });
+        return;
+      }
+
+      if (!this.isNumber(startCond) || !this.isNumber(endCond)) {
+        this.listLoading = false;
+        this.$message({ message: "请输入数字", type: "warning" });
+        return;
+      }
+
+      if (parseInt(startCond) > parseInt(endCond)) {
+        this.listLoading = false;
+        this.$message({ message: "请指定正确范围", type: "warning" });
+        return;
       }
 
       bus.$emit("new_search_request", param);
