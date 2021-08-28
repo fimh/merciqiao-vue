@@ -77,7 +77,12 @@
       <el-button size="small" round type="primary" @click="handleAdd"
         >新增</el-button
       >
-      <el-button size="small" round type="danger" @click="deleteMany" v-show="false"
+      <el-button
+        size="small"
+        round
+        type="danger"
+        @click="deleteMany"
+        v-show="false"
         >批量删除</el-button
       >
     </el-row>
@@ -608,14 +613,26 @@ export default {
      */
     handleSizeChange(val) {
       this.pageInfo.pageSize = val;
-      this.onRefreshData();
+      // this.onRefreshData();
+      if (this.queryObj == null) {
+        this.onRefreshData();
+      } else {
+        this.queryObj.pageSize = val;
+        this.onQuery(this.queryObj);
+      }
     },
     /**
      * 分页切换
      */
     handleCurrentChange(val) {
       this.pageInfo.currentPage = val;
-      this.onRefreshData();
+      // this.onRefreshData();
+      if (this.queryObj == null) {
+        this.onRefreshData();
+      } else {
+        this.queryObj.currentPage = val;
+        this.onQuery(this.queryObj);
+      }
     },
     /**
      * 点击选择

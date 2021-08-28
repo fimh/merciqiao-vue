@@ -13,16 +13,6 @@ const addRoutes = {
   mutations: {
     add_Routes(state, routeParam) {
       let routeList = [];
-      //添加默认路由,新用户登陆可以显示首页
-      routeList.push( {
-            name: 'index',
-            path: '/index',
-            component: resolve => require(['@/components/index.vue'], resolve),
-            meta: {
-              title: '系统首页'
-            }
-      });
-      //写入开发模式下静态路由
 
       let routeHideList=[];
       ConvertRoutes(routeList, routeHideList,routeParam); // 将后台的路由数据components转化成组件
